@@ -58,7 +58,7 @@ void UnitTest(){
 		calculated_kilometers = milesToKm(miles_array[i]);
 		cout<<left<<setw(10)<<i+1<<setw(10)<<miles_array[i]<<setw(10)<<calculated_kilometers;		
 		if (calculated_kilometers < (kilometers_array[i] - tolerance) || calculated_kilometers > (kilometers_array[i] + tolerance)){
-			cout<<right<<setw(20)<<"<--- bad value";
+			cout<<right<<setw(15)<<"<--- bad value";
 			bad_element_count++;
 		}		
 		cout<<endl;
