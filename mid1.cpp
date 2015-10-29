@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		cout<<"Usage: ./mid1 'miles' 'tolerance'"<<endl;
 		return 0;
 	}
-	if (argc < 3){	
+	if (argc < 3 && miles >= 0.0){	
 		cout << miles << " miles = ";
 		cout << milesToKm(miles) << " Km" << endl;
 		cout << endl;
@@ -54,7 +54,7 @@ void UnitTest(){
 	cout<<left<<setw(10)<<"Miles"<<setw(10)<<"Table"<<setw(10)<<"Function"<<endl;
 	cout<<setw(10)<<"-----"<<setw(10)<<"-----"<<setw(10)<<"--------"<<endl;
 
-	for (int i=0;i<200;i++){
+	for (int i=0;i<10;i++){
 		calculated_kilometers = milesToKm(miles_array[i]);
 		cout<<left<<setw(10)<<i+1<<setw(10)<<miles_array[i]<<setw(10)<<calculated_kilometers;		
 		if (calculated_kilometers < (kilometers_array[i] - tolerance) || calculated_kilometers > (kilometers_array[i] + tolerance)){
